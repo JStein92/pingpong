@@ -5,20 +5,27 @@ function playPingPong(userNumber){
     var index = numbers.indexOf(i);
 
     if (canDivide(index,3) && !canDivide(index,15)){
-      numbers.splice(i,1,"ping");
+      numbers.splice(i,1,"ping ");
+      $("#output").append("<ping>" + numbers[i].toString() + " - </ping>");
     }
     else if(canDivide(index,5) && !canDivide(index,15)){
-      numbers.splice(i,1,"pong");
+      numbers.splice(i,1,"pong ");
+      $("#output").append("<pong>" + numbers[i].toString() + " - </pong>");
     }
     else if (canDivide(index,15)){
-      numbers.splice(i,1,"pingpong");
+      numbers.splice(i,1,"pingpong ");
+      $("#output").append("<pingpong>" + numbers[i].toString() + " - </pingpong>");
     }
     else {
-     //do nothing
+      numbers[i] += " - ";
+      $("#output").append("<number>" + numbers[i] + "</number>");
+      //do nothing
     }
+
   }
   numbers.splice(0,1);
-  return numbers;
+  var finalString = numbers.join('');
+  return finalString;
 }
 
 function canDivide(num, factor){
@@ -35,7 +42,7 @@ $(function(){
   $("form").submit(function(e){
     e.preventDefault();
     var userInput = parseInt($("#input").val());
-    $("#output").text(playPingPong(userInput));
+    playPingPong(userInput);
   });
 
 });

@@ -1,0 +1,19 @@
+body{
+  text-align: center;
+}
+#header{
+  text-align: center;
+  background-color: grey;
+}
+ping{
+  background-color: yellow;
+}
+pong{
+  background-color: green;
+}
+pingpong{
+  background-color: blue;
+}
+number{
+  background-color: silver;
+}
