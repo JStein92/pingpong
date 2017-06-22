@@ -1,5 +1,8 @@
 function playPingPong(userNumber){
   var numbers = [];
+  var pings = 0;
+  var pongs = 0;
+  var pingPongs= 0;
   for (var i = 0; i <= userNumber; i++) {
     numbers.push(i);
     var index = numbers.indexOf(i);
@@ -7,14 +10,17 @@ function playPingPong(userNumber){
     if (canDivide(index,3) && !canDivide(index,15)){
       numbers.splice(i,1,"ping ");
       $("#output").append("<ping>" + numbers[i].toString() + " - </ping>");
+      pings++;
     }
     else if(canDivide(index,5) && !canDivide(index,15)){
       numbers.splice(i,1,"pong ");
       $("#output").append("<pong>" + numbers[i].toString() + " - </pong>");
+      pongs++;
     }
     else if (canDivide(index,15)){
       numbers.splice(i,1,"pingpong ");
       $("#output").append("<pingpong>" + numbers[i].toString() + " - </pingpong>");
+      pingPongs++;
     }
     else {
       numbers[i] += " - ";
@@ -23,9 +29,10 @@ function playPingPong(userNumber){
     }
 
   }
-  numbers.splice(0,1);
-  var finalString = numbers.join('');
-  return finalString;
+  $('#pings').text(pings);
+  $('#pongs').text(pongs);
+  $('#pingPongs').text(pingPongs);
+  return;
 }
 
 function canDivide(num, factor){
