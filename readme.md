@@ -1,6 +1,6 @@
 # Ping Pong #
 ## By Jonathan Stein ##
-## _A website that changes user input based on the factors of numbers they enter_ ##
+## _A website that returns a modified user input based on the factors of numbers they enter_ ##
 
 ### _Specifications_ ###
 
