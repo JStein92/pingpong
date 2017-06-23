@@ -1,4 +1,5 @@
 function playPingPong(userNumber){
+
   var numbers = [];
   var pings = 0;
   var pongs = 0;
@@ -8,22 +9,21 @@ function playPingPong(userNumber){
     var index = numbers.indexOf(i);
 
     if (canDivide(index,3) && !canDivide(index,15)){
-      numbers.splice(i,1,"ping ");
-      $("#output").append("<ping>" + numbers[i].toString() + " - </ping>");
+      numbers.splice(i,1," ping ");
+      $("#output").append("<ping>" + numbers[i].toString() + "</ping>");
       pings++;
     }
     else if(canDivide(index,5) && !canDivide(index,15)){
-      numbers.splice(i,1,"pong ");
-      $("#output").append("<pong>" + numbers[i].toString() + " - </pong>");
+      numbers.splice(i,1," pong ");
+      $("#output").append("<pong>" + numbers[i].toString() + "</pong>");
       pongs++;
     }
     else if (canDivide(index,15)){
-      numbers.splice(i,1,"pingpong ");
-      $("#output").append("<pingpong>" + numbers[i].toString() + " - </pingpong>");
+      numbers.splice(i,1," pingpong ");
+      $("#output").append("<pingpong>" + numbers[i].toString() + "</pingpong>");
       pingPongs++;
     }
-    else {
-      numbers[i] += " - ";
+    else if (index>0) {
       $("#output").append("<number>" + numbers[i] + "</number>");
       //do nothing
     }
@@ -36,7 +36,7 @@ function playPingPong(userNumber){
 }
 
 function canDivide(num, factor){
-  if (num%factor==0){
+  if (num%factor==0 && num>0){
     return true;
   }
   else {
@@ -47,9 +47,43 @@ function canDivide(num, factor){
 $(function(){
 
   $("form").submit(function(e){
+
     e.preventDefault();
+    $('#output').text("");
     var userInput = parseInt($("#input").val());
     playPingPong(userInput);
+  });
+
+  $('#pingCount').hover(function(){
+    $('ping,#pingCount').css('background-color', 'white');
+    $('ping').css('border', '1px solid black');
+  }, function(){
+    $('ping,#pingCount').css('background-color', '#ffe7c4');
+    $('ping').css('border', '1px solid grey');
+  });
+
+  $('#pongCount').hover(function(){
+    $('pong,#pongCount').css('background-color', 'white');
+    $('pong').css('border', '1px solid black');
+  }, function(){
+    $('pong,#pongCount').css('background-color', '#bbf3f7');
+    $('pong').css('border', '1px solid grey');
+  });
+
+  $('#pingPongCount').hover(function(){
+    $('pingPong,#pingPongCount').css('background-color', 'white');
+    $('pingPong').css('border', '1px solid black');
+  }, function(){
+    $('pingPong,#pingPongCount').css('background-color', '#fbd6fc');
+    $('pingPong').css('border', '1px solid grey');
+  });
+
+  $('.form-group').hover(function(){
+    $('.form-group,number').css('background-color', 'white');
+    $('number').css('border', '1px solid black');
+  }, function(){
+    $('.form-group,number').css('background-color', '#dbfce0');
+    $('number').css('border', '1px solid grey');
   });
 
 });

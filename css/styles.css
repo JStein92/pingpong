@@ -2,10 +2,8 @@
   width: 100%;
 
 }
-.row{
-  width: 100%;
-}
 body{
+
   font-family: 'Titillium Web', sans-serif;
   text-align: center;
 }
@@ -18,20 +16,47 @@ body{
   width: 100%;
 }
 #header h1{
+
   color: black;
-   text-shadow: 2px 2px white;
+  text-shadow: 2px 2px white;
   font-size: 9em;
   padding-top: 100px;
 }
-ping{
-  background-color: yellow;
+button{
+  font-size: 2em;
 }
-pong{
-  background-color: green;
+#output{
+  margin: 20px;
+
+
 }
-pingpong{
-  background-color: blue;
+.form-group{
+  padding: 10px;
+  font-size: 2em;
+  background-color: #dbfce0;
+}
+
+ping,pong,pingpong,number{
+  font-size: 1.5em;
+  margin: 2px;
+  padding: 1px;
+  text-align: center;
+  border: 1px solid grey;
+}
+#subHeader{
+  margin-bottom: 60px;
+
+}
+
+#pingCount, ping{
+  background-color: #ffe7c4;
+}
+#pongCount, pong{
+  background-color:  #bbf3f7;
+}
+#pingPongCount, pingpong{
+  background-color: #fbd6fc;
 }
 number{
-  background-color: silver;
+  background-color: #dbfce0;
 }

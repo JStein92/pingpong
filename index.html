@@ -13,22 +13,22 @@
     <div id="header">
         <h1>Ping Pong</h1>
     </div>
-    <div class="row">
-      <div class="col-md-4">
+    <div id="subHeader">
+      <div class="col-md-4" id="pingCount">
         <h2 >Pings: <span id="pings"></span></h2>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4"id="pongCount">
         <h2>Pongs: <span id="pongs"></span></h2>
       </div>
-      <div class="col-md-4">
-        <h2 >PingPongs: <span id="pingPongs"></span></h2>
+      <div class="col-md-4" id="pingPongCount">
+        <h2>PingPongs: <span id="pingPongs"></span></h2>
       </div>
     </div>
 
     <form>
       <div class="form-group">
         <label for="input">Enter a number greater than 0: </label>
-        <input type="number" id="input" value="">
+        <input type="number" id="input" min="1">
       </div>
       <button type="submit" id="submit">Let's play!</button>
     </form>
