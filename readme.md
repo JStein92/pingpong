@@ -35,7 +35,7 @@ In the range of numbers from 1-x program prints numbers divisible by 15 as "ping
 ### _Content_ ###
 
 Index.html:
-- This contains the quiz the user can take to display an optimal vacation destination.
+- This contains the Ping Pong game that lets the user input a number and see the results of the program.
 
 Other:
 - Img folder to store local images
@@ -44,12 +44,12 @@ Other:
 
 ### _How to use_ ###
 
-1. Download project from GitHub: https://github.com/JStein92/vacationSuggester
+1. Download project from GitHub: https://github.com/JStein92/pingpong
 2. Run HTML in preferred browser
 3. Follow instructions on page
-  - Select answers by clicking on images.
-  - After selecting one answer for each question, submit your answers by clicking the button at the bottom of the page.
-  - After submitting answers, the site will display all appropriate vacation suggestions.
+  - Enter number in input box
+  - Press "enter" or the submit button.
+  - After submitting number, the site will display an output based on the specs given. 
 
 #### _Legal Information_ ####
 Copyright (c) 2017 Copyright Holder All Rights Reserved.
