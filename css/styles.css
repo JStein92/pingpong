@@ -1,10 +1,8 @@
 .container{
   width: 100%;
-
 }
 body{
-
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Istok Web', sans-serif;
   text-align: center;
 }
 #header{
@@ -16,19 +14,16 @@ body{
   width: 100%;
 }
 #header h1{
-
-  color: black;
   text-shadow: 2px 2px white;
   font-size: 9em;
   padding-top: 100px;
+  margin-top: 0px;
 }
 button{
   font-size: 2em;
 }
 #output{
   margin: 20px;
-
-
 }
 .form-group{
   padding-top: 10px;
@@ -36,13 +31,13 @@ button{
   background-color: #dbfce0;
   margin-bottom: 0px;
 }
-
 ping,pong,pingpong,number{
+  display: inline-block;
+  line-height: 40px;
   font-size: 1.5em;
-  margin: 2px;
+  margin: 4px;
   padding: 1px;
   text-align: center;
-  border: 1px solid grey;
 }
 #rules{
 background-color: #e0e0e0;
@@ -50,18 +45,26 @@ background-color: #e0e0e0;
 }
 #subHeader{
   margin-bottom: 60px;
-
 }
 
-#pingCount, ping{
+.white-background{
+  background-color: white;
+}
+.ping-background{
   background-color: #ffe7c4;
 }
-#pongCount, pong{
+.pong-background{
   background-color:  #bbf3f7;
 }
-#pingPongCount, pingpong{
+.pingPong-background{
   background-color: #fbd6fc;
 }
-number{
+.number-background{
   background-color: #dbfce0;
+}
+.black-border{
+  border: 2px solid black;
+}
+.grey-border{
+    border: 2px solid grey;
 }
