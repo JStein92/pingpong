@@ -31,9 +31,10 @@ button{
 
 }
 .form-group{
-  padding: 10px;
+  padding-top: 10px;
   font-size: 2em;
   background-color: #dbfce0;
+  margin-bottom: 0px;
 }
 
 ping,pong,pingpong,number{
@@ -42,6 +43,10 @@ ping,pong,pingpong,number{
   padding: 1px;
   text-align: center;
   border: 1px solid grey;
+}
+#rules{
+background-color: #e0e0e0;
+    font-size: 1.5em;
 }
 #subHeader{
   margin-bottom: 60px;

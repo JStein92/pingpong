@@ -52,6 +52,7 @@ $(function(){
     $('#output').text("");
     var userInput = parseInt($("#input").val());
     playPingPong(userInput);
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000); //slide to  bottom of page
   });
 
   $('#pingCount').hover(function(){

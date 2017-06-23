@@ -10,8 +10,9 @@
 </head>
 <body>
   <div class="container">
+
     <div id="header">
-        <h1>Ping Pong</h1>
+      <h1>Ping Pong</h1>
     </div>
     <div id="subHeader">
       <div class="col-md-4" id="pingCount">
@@ -30,17 +31,22 @@
         <label for="input">Enter a number greater than 0: </label>
         <input type="number" id="input" min="1">
       </div>
+      <div id="rules">
+        <ul>
+          <li>Numbers divisible by 3 are replaced with "ping"</li>
+          <li>Numbers divisible by 5 are replaced with "pong"</li>
+          <li>Numbers divisible by 15 are replaced with "pingpong"</li>    
+        </ul>
+      </div>
       <button type="submit" id="submit">Let's play!</button>
     </form>
+
     <div class="row">
       <div class="col-sm-12">
         <div id="output">
-
         </div>
       </div>
     </div>
-
   </div>
-
 </body>
 </html>
